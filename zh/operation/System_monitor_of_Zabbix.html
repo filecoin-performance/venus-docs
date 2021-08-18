@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、服务器基础配置: | 启明星</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/assets/venus-logo.png">
+    <meta name="description" content="GO语言实现的Filecoin分布式存储网络">
+    
+    <link rel="preload" href="/assets/css/0.styles.117964e0.css" as="style"><link rel="preload" href="/assets/js/app.c54dbfd7.js" as="script"><link rel="preload" href="/assets/js/2.975ccc2c.js" as="script"><link rel="preload" href="/assets/js/107.5a8c8f29.js" as="script"><link rel="prefetch" href="/assets/js/10.d99f1032.js"><link rel="prefetch" href="/assets/js/100.8d331781.js"><link rel="prefetch" href="/assets/js/101.beff7747.js"><link rel="prefetch" href="/assets/js/102.1cb5365a.js"><link rel="prefetch" href="/assets/js/103.72c48bd4.js"><link rel="prefetch" href="/assets/js/104.f36406a6.js"><link rel="prefetch" href="/assets/js/105.c54b8e6a.js"><link rel="prefetch" href="/assets/js/106.02279486.js"><link rel="prefetch" href="/assets/js/108.ec8b391b.js"><link rel="prefetch" href="/assets/js/11.73ea5553.js"><link rel="prefetch" href="/assets/js/12.dfb2b0dc.js"><link rel="prefetch" href="/assets/js/13.0680ea6b.js"><link rel="prefetch" href="/assets/js/14.ffe3b738.js"><link rel="prefetch" href="/assets/js/15.27d31e41.js"><link rel="prefetch" href="/assets/js/16.267b0382.js"><link rel="prefetch" href="/assets/js/17.e891a041.js"><link rel="prefetch" href="/assets/js/18.04c9a8ca.js"><link rel="prefetch" href="/assets/js/19.a76c25be.js"><link rel="prefetch" href="/assets/js/20.5bae2206.js"><link rel="prefetch" href="/assets/js/21.4205f0a9.js"><link rel="prefetch" href="/assets/js/22.344f9938.js"><link rel="prefetch" href="/assets/js/23.bacd5c71.js"><link rel="prefetch" href="/assets/js/24.e109a378.js"><link rel="prefetch" href="/assets/js/25.265f266c.js"><link rel="prefetch" href="/assets/js/26.0fc597fa.js"><link rel="prefetch" href="/assets/js/27.2157521b.js"><link rel="prefetch" href="/assets/js/28.fddec8a8.js"><link rel="prefetch" href="/assets/js/29.c5c6421e.js"><link rel="prefetch" href="/assets/js/3.b200c0b1.js"><link rel="prefetch" href="/assets/js/30.e7d43314.js"><link rel="prefetch" href="/assets/js/31.fbc0534d.js"><link rel="prefetch" href="/assets/js/32.c3a7f0fb.js"><link rel="prefetch" href="/assets/js/33.d47ea0fb.js"><link rel="prefetch" href="/assets/js/34.7c1bed54.js"><link rel="prefetch" href="/assets/js/35.d26e1942.js"><link rel="prefetch" href="/assets/js/36.ef57e362.js"><link rel="prefetch" href="/assets/js/37.eaed74a4.js"><link rel="prefetch" href="/assets/js/38.d6de25d0.js"><link rel="prefetch" href="/assets/js/39.bed424dc.js"><link rel="prefetch" href="/assets/js/4.4e64739e.js"><link rel="prefetch" href="/assets/js/40.ea675ba6.js"><link rel="prefetch" href="/assets/js/41.bd52f078.js"><link rel="prefetch" href="/assets/js/42.72617127.js"><link rel="prefetch" href="/assets/js/43.db399951.js"><link rel="prefetch" href="/assets/js/44.7e6daa16.js"><link rel="prefetch" href="/assets/js/45.ab3f96f6.js"><link rel="prefetch" href="/assets/js/46.68aec4fd.js"><link rel="prefetch" href="/assets/js/47.ea345beb.js"><link rel="prefetch" href="/assets/js/48.f7b9ee77.js"><link rel="prefetch" href="/assets/js/49.86847a46.js"><link rel="prefetch" href="/assets/js/5.34fedeab.js"><link rel="prefetch" href="/assets/js/50.fbc69b91.js"><link rel="prefetch" href="/assets/js/51.2e2d1175.js"><link rel="prefetch" href="/assets/js/52.63baa94f.js"><link rel="prefetch" href="/assets/js/53.d1ac523a.js"><link rel="prefetch" href="/assets/js/54.e9b017f5.js"><link rel="prefetch" href="/assets/js/55.3d057392.js"><link rel="prefetch" href="/assets/js/56.8f34b48c.js"><link rel="prefetch" href="/assets/js/57.b434c744.js"><link rel="prefetch" href="/assets/js/58.218aa5a7.js"><link rel="prefetch" href="/assets/js/59.6d58bad3.js"><link rel="prefetch" href="/assets/js/6.1fe13b4e.js"><link rel="prefetch" href="/assets/js/60.376cfae0.js"><link rel="prefetch" href="/assets/js/61.7dcad05d.js"><link rel="prefetch" href="/assets/js/62.779db623.js"><link rel="prefetch" href="/assets/js/63.dd181b08.js"><link rel="prefetch" href="/assets/js/64.a106d972.js"><link rel="prefetch" href="/assets/js/65.76a83247.js"><link rel="prefetch" href="/assets/js/66.a978d6ed.js"><link rel="prefetch" href="/assets/js/67.767823e1.js"><link rel="prefetch" href="/assets/js/68.f93570ee.js"><link rel="prefetch" href="/assets/js/69.76853429.js"><link rel="prefetch" href="/assets/js/7.7853ea60.js"><link rel="prefetch" href="/assets/js/70.e5cb5a0b.js"><link rel="prefetch" href="/assets/js/71.8760857b.js"><link rel="prefetch" href="/assets/js/72.294655aa.js"><link rel="prefetch" href="/assets/js/73.57e68a01.js"><link rel="prefetch" href="/assets/js/74.15af5e7d.js"><link rel="prefetch" href="/assets/js/75.40344dd1.js"><link rel="prefetch" href="/assets/js/76.606c3574.js"><link rel="prefetch" href="/assets/js/77.8b0e510a.js"><link rel="prefetch" href="/assets/js/78.fd807fae.js"><link rel="prefetch" href="/assets/js/79.4351b51b.js"><link rel="prefetch" href="/assets/js/8.9ecdec9c.js"><link rel="prefetch" href="/assets/js/80.0d7c4a5a.js"><link rel="prefetch" href="/assets/js/81.1e2a4c4c.js"><link rel="prefetch" href="/assets/js/82.699b30a9.js"><link rel="prefetch" href="/assets/js/83.25138a77.js"><link rel="prefetch" href="/assets/js/84.033e3036.js"><link rel="prefetch" href="/assets/js/85.5b4b565d.js"><link rel="prefetch" href="/assets/js/86.5837a385.js"><link rel="prefetch" href="/assets/js/87.0becf39f.js"><link rel="prefetch" href="/assets/js/88.fa1da309.js"><link rel="prefetch" href="/assets/js/89.a1214f47.js"><link rel="prefetch" href="/assets/js/9.41a25c3d.js"><link rel="prefetch" href="/assets/js/90.850bb30a.js"><link rel="prefetch" href="/assets/js/91.59cacdf1.js"><link rel="prefetch" href="/assets/js/92.71a9f18e.js"><link rel="prefetch" href="/assets/js/93.6c5092cf.js"><link rel="prefetch" href="/assets/js/94.b222a1eb.js"><link rel="prefetch" href="/assets/js/95.30c84a96.js"><link rel="prefetch" href="/assets/js/96.791fd09b.js"><link rel="prefetch" href="/assets/js/97.f81106e7.js"><link rel="prefetch" href="/assets/js/98.5feec3f0.js"><link rel="prefetch" href="/assets/js/99.2ea54e04.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.117964e0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><img src="/assets/venus-logo-title.svg" alt="启明星" class="logo"> <span class="site-name can-hide">启明星</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/guide/" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/zh/modules/" class="nav-link">
+  组件模块
+</a></div><div class="nav-item"><a href="/zh/advanced/" class="nav-link">
+  进阶
+</a></div><div class="nav-item"><a href="/zh/operation/" class="nav-link router-link-active">
+  运维
+</a></div><div class="nav-item"><a href="/zh/incubation/" class="nav-link">
+  孵化器
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/operation/System_monitor_of_Zabbix.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/operation/System_monitor_of_Zabbix.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/guide/" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/zh/modules/" class="nav-link">
+  组件模块
+</a></div><div class="nav-item"><a href="/zh/advanced/" class="nav-link">
+  进阶
+</a></div><div class="nav-item"><a href="/zh/operation/" class="nav-link router-link-active">
+  运维
+</a></div><div class="nav-item"><a href="/zh/incubation/" class="nav-link">
+  孵化器
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/operation/System_monitor_of_Zabbix.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/operation/System_monitor_of_Zabbix.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>独立组件运维</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/operation/" aria-current="page" class="sidebar-link">独立组件运维进阶</a></li><li><a href="/zh/operation/Efficiency_of_sealing.html" class="sidebar-link">最大化利用资源提升密封扇区效率</a></li><li><a href="/zh/operation/System_monitor_of_Zabbix.html" aria-current="page" class="active sidebar-link">系统监控安装与使用之Zabbix</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id="一、服务器基础配置"><a href="#一、服务器基础配置" class="header-anchor">#</a> 一、服务器基础配置:</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl stop firewalld 
+systemctl disbale firewalld
+<span class="token function">vim</span> /etc/selinux/config
+
+<span class="token assign-left variable">SELINUX</span><span class="token operator">=</span>disabled //修改selinux为disabled
+setenforce <span class="token number">0</span> //临时修改selinux状态
+getenforce //查看selinux状态
+</code></pre></div><h4 id="二、安装相关软件包"><a href="#二、安装相关软件包" class="header-anchor">#</a> 二、安装相关软件包</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm</span>
+<span class="token comment"># yum clean all &amp;&amp; yum makecache</span>
+
+// server端安装zabbix-server和zabbix-agent
+<span class="token comment"># yum install zabbix-server-mysql zabbix-agent -y</span>
+
+//安装zabbix默认的nginx
+<span class="token comment"># yum install centos-release-scl -y</span>
+<span class="token comment"># yum install rh-php72-php-mysqlnd zabbix-nginx-conf-scl -y</span>
+</code></pre></div><p>修改zabbix的安装源配置文件，启用前端的源</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># vim /etc/yum.repos.d/zabbix.repo </span>
+<span class="token punctuation">[</span>zabbix-frontend<span class="token punctuation">]</span>
+<span class="token assign-left variable">name</span><span class="token operator">=</span>Zabbix Official Repository frontend - <span class="token variable">$basearch</span>
+<span class="token assign-left variable">baseurl</span><span class="token operator">=</span>http://repo.zabbix.com/zabbix/5.0/rhel/7/<span class="token variable">$basearch</span>/frontend
+<span class="token assign-left variable">enabled</span><span class="token operator">=</span><span class="token number">1</span> //此处改为1
+<span class="token assign-left variable">gpgcheck</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">gpgkey</span><span class="token operator">=</span>file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+</code></pre></div><h4 id="三、安装mysql"><a href="#三、安装mysql" class="header-anchor">#</a> 三、安装MySQL</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mkdir</span> mysql-dir
+<span class="token builtin class-name">cd</span> mysql-dir
+<span class="token function">wget</span> https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.30-1.el7.x86_64.rpm-bundle.tar
+<span class="token function">tar</span> -zxvf mysql-5.7.32-1.el7.x86_64.rpm-bundle.tar
+yum <span class="token function">install</span> *.rpm -y
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>systemctl start mysqld
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cat</span> /var/log/mysqld.log <span class="token operator">|</span> <span class="token function">grep</span> root
+</code></pre></div><p>2021-07-26T10:50:49.538494Z 1 [Note] A temporary password is generated for root@localhost: <strong>20yyk:Ar67S;</strong></p> <p>登录数据库:</p> <div class="language-mysql extra-class"><pre class="language-text"><code># mysql -uroot -p
+Enter password: 20yyk:Ar67S;
+</code></pre></div><p>配置数据库:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">set</span> global <span class="token assign-left variable">validate_password_policy</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">set</span> global <span class="token assign-left variable">validate_password_length</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+alter user <span class="token string">'root'</span>@<span class="token string">'localhost'</span> identified by <span class="token string">'venus'</span><span class="token punctuation">;</span> <span class="token comment">#修改root登录密码为venus</span>
+
+use mysql<span class="token punctuation">;</span>
+update user <span class="token builtin class-name">set</span> <span class="token function">host</span> <span class="token operator">=</span> <span class="token string">'%'</span> where user <span class="token operator">=</span> <span class="token string">'root'</span><span class="token punctuation">;</span>
+create user <span class="token string">'zabbix'</span>@<span class="token string">'%'</span> identified  by <span class="token string">'123456'</span><span class="token punctuation">;</span>
+grant all privileges on zabbix.* to <span class="token string">'zabbix'</span>@<span class="token string">'%'</span><span class="token punctuation">;</span>
+flush privileges<span class="token punctuation">;</span>
+
+<span class="token comment"># 创建zabbix所需的数据库</span>
+create database zabbix character <span class="token builtin class-name">set</span> utf8 collate utf8_bin<span class="token punctuation">;</span>
+</code></pre></div><p>导入zabbix模版文件:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>zcat /usr/share/doc/zabbix-server-mysql-5.0.14/create.sql.gz <span class="token operator">|</span> mysql -uzabbix -p123456 zabbix
+</code></pre></div><h4 id="四、修改zabbix默认配置文件"><a href="#四、修改zabbix默认配置文件" class="header-anchor">#</a> 四、修改zabbix默认配置文件</h4> <p>1、修改连接数据库的密码:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># vim /etc/zabbix/zabbix_server.conf</span>
+<span class="token assign-left variable">DBPassword</span><span class="token operator">=</span><span class="token number">123456</span>
+</code></pre></div><p>2、修改nginx和所属地域</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># vim /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf</span>
+<span class="token comment"># 在第6行后边加上一个nginx</span>
+listen.acl_users <span class="token operator">=</span> apache,nginx
+
+<span class="token comment"># 在第24行修改zabbix所属的地域</span>
+php_value<span class="token punctuation">[</span>date.timezone<span class="token punctuation">]</span> <span class="token operator">=</span> Asia/shanghai
+</code></pre></div><p>3、配置监听端口和访问方式</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vim</span> /etc/opt/rh/rh-nginx116/nginx/conf.d/zabbix.conf
+server <span class="token punctuation">{</span>
+        listen          <span class="token number">80</span><span class="token punctuation">;</span>//取消注释
+        server_name     test.zabbix.com<span class="token punctuation">;</span>//取消注释修改成IP或自己的域名
+</code></pre></div><p>4、如果是伪装域名则修改本地的hosts文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vim</span> /etc/hosts
+<span class="token number">192.168</span>.xx.xx test.zabbix.com
+
+window hosts文件也需要添加一下
+C:<span class="token punctuation">\</span>Windows<span class="token punctuation">\</span>System32<span class="token punctuation">\</span>drivers<span class="token punctuation">\</span>etc<span class="token punctuation">\</span>hosts
+<span class="token number">192.168</span>.xxx.xxx test.zabbix.com 
+</code></pre></div><p>5、启动服务并设为开机自启</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 启动服务</span>
+systemctl restart zabbix-server zabbix-agent rh-nginx116-nginx rh-php72-php-fpm
+systemctl <span class="token builtin class-name">enable</span> zabbix-server zabbix-agent rh-nginx116-nginx rh-php72-php-fpm
+</code></pre></div><p>6、修改zabbix-agent的配置文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cat</span> /etc/zabbix/zabbix_agentd.conf <span class="token operator">|</span> <span class="token function">egrep</span> -v <span class="token string">&quot;^$|^#&quot;</span>
+<span class="token assign-left variable">PidFile</span><span class="token operator">=</span>/var/run/zabbix/zabbix_agentd.pid
+<span class="token assign-left variable">LogFile</span><span class="token operator">=</span>/var/log/zabbix/zabbix_agentd.log
+<span class="token assign-left variable">LogFileSize</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token assign-left variable">Server</span><span class="token operator">=</span><span class="token number">192.168</span>.88.11  //指定zabbix-server的ip地址
+<span class="token assign-left variable">Hostname</span><span class="token operator">=</span>venus-sealer
+<span class="token assign-left variable">Include</span><span class="token operator">=</span>/etc/zabbix/zabbix_agentd.d/*.conf
+</code></pre></div><h4 id="四、配置zabbix监控主机"><a href="#四、配置zabbix监控主机" class="header-anchor">#</a> 四、配置zabbix监控主机</h4> <p>1、在浏览器输入zabbix-server的ip地址或者主机名
+<img src="/01-zabbix-install.jpg" alt=""> <img src="/02-zabbix-install.jpg" alt=""></p> <p>2、配置数据库连接地址信息
+<img src="/03-zabbix-config.jpg" alt=""> <img src="/04-zabbix-hostname.jpg" alt=""> <img src="/05-zabbix-all.jpg" alt=""> <img src="/06-zabbix-finished.jpg" alt=""></p> <p>3、登录到zabbix系统，默认的用户为Admin，密码为zabbix;注意Admin的A是大写字母
+<img src="/07-zabbix-login.jpg" alt=""> <img src="/08-zabbix-dashboard.jpg" alt=""></p> <p>4、添加zabbix-agent主机
+<img src="/09-zabbix-agent.jpg" alt=""> <img src="/10-zabbix-agent-add.jpg" alt=""></p> <p>5、查看zabbix监控机器的内存图
+<img src="/11-zabbix-graphs.jpg" alt=""> <img src="/12-zabbix-memory.jpg" alt=""></p> <p>6、异常报警，需要处理的机器
+<img src="/13-Alarm-information.jpg" alt=""></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/filecoin-project/venus-docs/edit/master/docs/zh/operation/System_monitor_of_Zabbix.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2021/8/10 下午5:18:35</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zh/operation/Efficiency_of_sealing.html" class="prev">
+        最大化利用资源提升密封扇区效率
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.c54dbfd7.js" defer></script><script src="/assets/js/2.975ccc2c.js" defer></script><script src="/assets/js/107.5a8c8f29.js" defer></script>
+  </body>
+</html>
